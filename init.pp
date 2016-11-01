@@ -14,7 +14,7 @@ class sshd {
     		ensure    => running,
     		enable    => true,
     		
-    		require => Package[openssh-server],
+    		require => Package["openssh-server"],
 		hasstatus => 'false',
 		status =>"/etc/init.d/ssh status|grep running",
 		
